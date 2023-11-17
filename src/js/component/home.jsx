@@ -152,10 +152,10 @@ const Home = () => {
 							</li>
 
 							{lista && lista.map((tarea, index) => (
-								<li key={tarea.id} className=" list-group-item d-flex justify-content-between align-items-center">
+								index > 0?<li key={tarea.id} className=" list-group-item d-flex justify-content-between align-items-center">
 									<p>{tarea.label}</p>
 									<i className="fa-solid fa-x" style={{ color: '#ff0000' }} onClick={() => Eliminar(tarea.id)}></i>
-								</li>
+								</li>:null
 							))}
 						</ul>
 
